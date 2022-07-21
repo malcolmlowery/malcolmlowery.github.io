@@ -97,6 +97,7 @@ content {
 }
 
 .card__text-group > p {
+   height: 80px;
    margin-bottom: 20px;
 }
 
@@ -107,4 +108,11 @@ content {
 .card > video {
    border-radius: 40px;
    max-width: 360px;
+   height: 600px;
+}
+
+.card > img {
+   border-radius: 40px;
+   max-width: 360px;
+   height: 600px;
 }
