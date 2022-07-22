@@ -4,6 +4,8 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Front-end Developer with experience mobile app development and graphic design">
+   <meta name="keywords" content="portfolio, javascript, html, css, react-native, react, firebase, cloud functions, figma, ios, cross-platform">
    <link rel='stylesheet' href='./index.css' />
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +16,7 @@
 <body>
    <container>
 
-      <div class="header">
+      <header class="header">
          <div class="header__image-container">
             <img src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80" />
          </div>
@@ -22,17 +24,13 @@
             <h1>Malcolm Lowery</h1>
             <h3>Software Engineer</h3>
          </div>
-      </div>
+      </header>
 
-      <content>
-         <div class="content-header">
-            <h3>My Projects 😎</h3>
-         </div>
-
+      <section class="content">
+         <h3 class="content__title">My Projects 😎</h3>
          <div class="content__projects">
-
-            <div class="card">
-               <div class="card__text-group">
+            <div class="content__projects__card">
+               <div class="content__projects__card__text-group">
                   <h3>Nursely</h3>
                   <p>A social media app for nurses who want to share their thoughts, opinions, and questions - all while focusing on self-care and career accomplishments</p>
                   <a target="_blank" href="https://github.com/malcolmlowery/Nursely">
@@ -42,8 +40,8 @@
                <video class="card__video" controls src="./videos/nursely-vid-01.MP4" />
             </div>
 
-            <div class="card">
-               <div class="card__text-group">
+            <div class="content__projects__card">
+               <div class="content__projects__card__text-group">
                   <h3>WeatherDART</h3>
                   <p>This app is for viewing past and current weather conditions around the US!</p>
                   <a target="_blank" href="https://github.com/malcolmlowery/WeatherDART">
@@ -56,65 +54,83 @@
                <img src="./images/screenshot-05.png" />
             </div>
 
-            <div class="card">
-               <div class="card__text-group">
+            <div class="content__projects__card">
+               <div class="content__projects__card__text-group">
                   <h3>PawCast</h3>
                   <p>Dog breeding app with social media features to connect with others.</p>
-                  <a target="_blank" href="hhttps://github.com/malcolmlowery/PawCast">
-                     <p>https://github.com/malcolmlowery/PawCast</p>
+                  <a target="_blank" href="https://github.com/malcolmlowery/PawCast">
+                     <p>Github</p>
+                  </a>
+                  <a target="_blank" href="https://apps.apple.com/us/app/pawcast/id1542528251">
+                     <p>App Store</p>
                   </a>
                </div>
                <video controls src="./videos/pawcast-vid-01.MP4" />
             </div>
-
          </div>
       </content>
-   
-      <div class="contact-form">
-               <div>
-                  <h1>✉️ Contact</h1>
-               </div>
-                <form class="fcf-form-class" id="freeversion" method="post" action="fcf-assets/fcf.process.php">
-      
-                    <div class="field">
-                        <label for="Name" class="label has-text-weight-normal">Your name</label>
-                        <div class="control">
-                            <input type="text" name="Name" id="Name" class="input is-full-width" maxlength="100"
-                                data-validate-field="Name">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label for="Email" class="label has-text-weight-normal">Your email address</label>
-                        <div class="control">
-                            <input type="email" name="Email" id="Email" class="input is-full-width" maxlength="100"
-                                data-validate-field="Email">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label for="Message" class="label has-text-weight-normal">Your message</label>
-                        <div class="control">
-                            <textarea name="Message" id="Message" class="textarea" maxlength="3000" rows="5" 
-                            data-validate-field="Message"></textarea>
-                        </div>
-                    </div>
-                    <div id="fcf-status" class="fcf-status"></div>
-                    <div class="field">
-                        <div class="buttons">
-                            <button id="fcf-button" type="submit" class="button is-link is-medium">Send Message</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div id="fcf-thank-you" style="display:none">
-                <!-- Thank you message goes below -->
-                <strong>Thank you</strong>
-                <p>Thanks for contacting us, we will get back in touch with you soon.</p>
-                <!-- Thank you message goes above -->
-            </div>
+
+      <section class="skills">
+         <div class="skills__languages">
+            <h1>Languages</h1>
+            <p>Javascript</p>
+            <p>HTML</p>
+            <p>CSS</p>
          </div>
+         <div class="skills__frameworks">
+            <h1>Frameworks & Libaries</h1>
+            <p>React Native</p>
+            <p>Redux & Redux Toolkit</p>
+            <p>Firebase</p>
+            <p>ExpressJS</p>
+         </div>
+      </section>
+   
+      <section class="contact-form">
+         <div>
+            <h1>✉️ Contact</h1>
+         </div>
+            <form class="fcf-form-class" id="freeversion" method="post" action="fcf-assets/fcf.process.php">
+
+               <div class="field">
+                  <label for="Name" class="label has-text-weight-normal">Your name</label>
+                  <div class="control">
+                        <input type="text" name="Name" id="Name" class="input is-full-width" maxlength="100"
+                           data-validate-field="Name">
+                  </div>
+               </div>
+               <div class="field">
+                  <label for="Email" class="label has-text-weight-normal">Your email address</label>
+                  <div class="control">
+                        <input type="email" name="Email" id="Email" class="input is-full-width" maxlength="100"
+                           data-validate-field="Email">
+                  </div>
+               </div>
+               <div class="field">
+                  <label for="Message" class="label has-text-weight-normal">Your message</label>
+                  <div class="control">
+                        <textarea name="Message" id="Message" class="textarea" maxlength="3000" rows="5" 
+                        data-validate-field="Message"></textarea>
+                  </div>
+               </div>
+               <div id="fcf-status" class="fcf-status"></div>
+               <div class="field">
+                  <div class="buttons">
+                        <button id="fcf-button" type="submit" class="button is-link is-medium">Send Message</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+         <div id="fcf-thank-you" style="display:none">
+            <!-- Thank you message goes below -->
+            <strong>Thank you</strong>
+            <p>Thanks for contacting me, I will get back in touch with you soon.</p>
+            <!-- Thank you message goes above -->
+         </div>
+      </section>
    </container>
 
-  <script src="fcf-assets/js/fcf.just-validate.min.js"></script>
-  <script src="fcf-assets/js/fcf.form.js"></script>
+   <script src="fcf-assets/js/fcf.just-validate.min.js"></script>
+   <script src="fcf-assets/js/fcf.form.js"></script>
 </body>
 </html>
