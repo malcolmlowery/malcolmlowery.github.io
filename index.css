@@ -101,7 +101,8 @@ content {
    margin-bottom: 20px;
 }
 
-.card__text-group > a > p {
+.card__text-group > a:last-child  > p {
+   margin-top: 10px;
    margin-bottom: 36px;
 }
 
@@ -115,4 +116,12 @@ content {
    border-radius: 40px;
    max-width: 360px;
    height: 600px;
+}
+
+a:hover {
+   color: #f8d020;
+}
+
+.card__text-group  > a > p:hover {
+   color: #f8d020;
 }
