@@ -4,136 +4,143 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="Front-end Developer with experience mobile app development and graphic design">
-   <meta name="keywords" content="portfolio, javascript, html, css, react-native, react, firebase, cloud functions, figma, ios, cross-platform">
-   <meta property="og:image" content="/images/thumbnail-01.jpg">
-   <meta property="og:title" content="Malcolm Lowery | Software Engineer">
-   <meta property="og:description" content="Front-end Developer with experience mobile app development and graphic design">
-   <meta property="og:url" content="https://malcolmlowery.github.io/">
-   <meta property="og:type" content="website">
-   <link rel='stylesheet' href='./index.css' />
+   <link rel="stylesheet" href="./styles.css" />
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,400;1,800&display=swap" rel="stylesheet">
-   <link href="fcf-assets/css/fcf.default.css" rel="stylesheet">
-   <title>Malcolm Lowery - Portfolio</title>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+   <title>Malcolm Lowery's Portfolio</title>
 </head>
 <body>
-   <container>
-
-      <header class="header">
-         <div class="header__image-container">
-            <img src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80" />
+   <div class="body-bg"></div>
+   <nav class="navigation">
+      <div class="navigation__content">
+         <h2 class="navigation__title">Malcolm Lowery</h2>
+         <div class="navigation__list-items">
+            <ul>
+               <li><button id="home" onclick="scrollToElementInDOM(event)">Home</button></li>
+               <li><button id="about-me" onclick="scrollToElementInDOM(event)">About Me</button></li>
+               <li><button id="my-work" onclick="scrollToElementInDOM(event)">My Work</button></li>
+               <li><button id="tech-stack" onclick="scrollToElementInDOM(event)">Tech Stack</button></li>
+            </ul>
+            <button class="button">Contact Me</button>
          </div>
-         <div class="header__text-container">
-            <h1>Malcolm Lowery</h1>
-            <h3>Software Engineer</h3>
-         </div>
-      </header>
-
-      <section class="content">
-         <h3 class="content__title">My Projects 😎</h3>
-         <div class="content__projects">
-            <div class="content__projects__card">
-               <div class="content__projects__card__text-group">
-                  <h3>Nursely</h3>
-                  <p>A social media app for nurses who want to share their thoughts, opinions, and questions - all while focusing on self-care and career accomplishments</p>
-                  <a target="_blank" href="https://github.com/malcolmlowery/Nursely">
-                     <p>Github</p>
-                  </a>
-               </div>
-               <video class="card__video" controls src="./videos/nursely-vid-01.MP4" />
-            </div>
-
-            <div class="content__projects__card">
-               <div class="content__projects__card__text-group">
-                  <h3>WeatherDART</h3>
-                  <p>This app is for viewing past and current weather conditions around the US!</p>
-                  <a target="_blank" href="https://github.com/malcolmlowery/WeatherDART">
-                     <p>Github</p>
-                  </a>
-                  <a target="_blank" href="https://weatherdart.netlify.app/">
-                     <p>Demo - PWA Capable</p>
-                  </a>
-               </div>
-               <img src="./images/screenshot-05.png" />
-            </div>
-
-            <div class="content__projects__card">
-               <div class="content__projects__card__text-group">
-                  <h3>PawCast</h3>
-                  <p>Dog breeding app with social media features to connect with others.</p>
-                  <a target="_blank" href="https://github.com/malcolmlowery/PawCast">
-                     <p>Github</p>
-                  </a>
-                  <a target="_blank" href="https://apps.apple.com/us/app/pawcast/id1542528251">
-                     <p>App Store</p>
-                  </a>
-               </div>
-               <video controls src="./videos/pawcast-vid-01.MP4" />
-            </div>
-         </div>
-      </content>
-
-      <section class="skills">
-         <div class="skills__languages">
-            <h1>Languages</h1>
-            <p>Javascript</p>
-            <p>HTML</p>
-            <p>CSS</p>
-         </div>
-         <div class="skills__frameworks">
-            <h1>Frameworks & Libaries</h1>
-            <p>React Native</p>
-            <p>Redux & Redux Toolkit</p>
-            <p>Firebase</p>
-            <p>ExpressJS</p>
+      </div>
+   </nav>
+   <div class="content">
+      <section class="banner">
+         <img class="banner__profile-image" src="./assets/images/profile-image-01.jpg" />
+         <div class="banner__introduction">
+            <h1>Hello, my name is Malcolm Lowery</h1>
+            <p>Software Engineer</p>
          </div>
       </section>
+      <section class="content__about-me" id="content__about-me">
+         <div class="content__about-me__summary">
+            <h1>About Me</h1>
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+                  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
+                  in culpa qui officia deserunt mollit anim id est laborum.
+               </p>
+               <button class="button">
+                  <p>Download CV</p>
+               </button>
+         </div>
+         <div class="content__about-me__anime">
+            <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_i5tna2kq.json" background="transparent"  speed="1"  style="width: 300px; height: 300px;" autoplay></lottie-player>
+         </div>
+      </section>
+
+      <div class="line"></div>
+
+      <section class="content__my-work">
+         <div class="content__my-work__portfolio-item">
+            <div class="app__summary">
+               <h1>Nursely</h1>
+               <p>A social media app for nurses who want to share their thoughts, opinions, and questions - all while focusing on self-care and career accomplishments</p>
+               <div class="techstack__content">
+                  <h1>Tech Stack</h1>
+                  <div class="techstack-item">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" />
+                     <p>React Native (Expo)</p>
+                  </div>
+                  <div class="techstack-item">
+                     <img src="./assets/images/redux-logo-01.png" />
+                     <p>Redux Toolkit Query</p>
+                  </div>
+                  <div class="techstack-item">
+                     <img src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" />
+                     <p>ExpressJS</p>
+                  </div>
+                  <div class="techstack-item">
+                     <img src="./assets/images/firebase-logo-01.png" />
+                     <p>Firebase Cloud Functions</p>
+                  </div>
+               </div>
+            </div>
+            <video controls src="./assets/videos/nursely-vid-01.MP4" />
+         </div>
+      </section>
+
+      <section class="content__my-work">
+         <div class="content__my-work__portfolio-item">
+            <div class="app__summary">
+               <h1>WeatherDART</h1>
+               <p>This app is for viewing past and current weather conditions around the US!</p>
+               <div class="techstack__content">
+                  <h1>Tech Stack</h1>
+                  <div class="techstack-item">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" />
+                     <p>React Native (Expo)</p>
+                  </div>
+                  <div class="techstack-item">
+                     <img src="./assets/images/redux-logo-01.png" />
+                     <p>Redux</p>
+                  </div>
+               </div>
+            </div>
+            <img controls src="assets/images/weatherdart-image-01.png" />
+         </div>
+      </section>
+
+      <section class="content__my-work">
+         <div class="content__my-work__portfolio-item">
+            <div class="app__summary">
+               <h1>PawCast</h1>
+               <p>Dog breeding app with social media features to connect with others.</p>
+               <div class="techstack__content">
+                  <h1>Tech Stack</h1>
+                  <div class="techstack-item">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" />
+                     <p>React Native (Expo)</p>
+                  </div>
+                  <div class="techstack-item">
+                     <img src="./assets/images/redux-logo-01.png" />
+                     <p>Redux</p>
+                  </div>
+               </div>
+            </div>
+            <video controls src="./assets/videos/pawcast-vid-01.MP4" />
+         </div>
+      </section>
+   </div>
    
-      <section class="contact-form">
-         <div>
-            <h1>✉️ Contact</h1>
-         </div>
-            <form class="fcf-form-class" id="freeversion" method="post" action="fcf-assets/fcf.process.php">
+   <div class="footer">
+      <div class="footer__content">
+         <p>© 2022 Malcolm Lowery | Portfolio</p>
+      </div>
+   </div>
 
-               <div class="field">
-                  <label for="Name" class="label has-text-weight-normal">Your name</label>
-                  <div class="control">
-                        <input type="text" name="Name" id="Name" class="input is-full-width" maxlength="100"
-                           data-validate-field="Name">
-                  </div>
-               </div>
-               <div class="field">
-                  <label for="Email" class="label has-text-weight-normal">Your email address</label>
-                  <div class="control">
-                        <input type="email" name="Email" id="Email" class="input is-full-width" maxlength="100"
-                           data-validate-field="Email">
-                  </div>
-               </div>
-               <div class="field">
-                  <label for="Message" class="label has-text-weight-normal">Your message</label>
-                  <div class="control">
-                        <textarea name="Message" id="Message" class="textarea" maxlength="3000" rows="5" 
-                        data-validate-field="Message"></textarea>
-                  </div>
-               </div>
-               <div id="fcf-status" class="fcf-status"></div>
-               <div class="field">
-                  <div class="buttons">
-                        <button id="fcf-button" type="submit" class="button is-link is-medium">Send Message</button>
-                  </div>
-               </div>
-            </form>
-         </div>
-         <div id="fcf-thank-you" style="display:none">
-            <strong>Thank you</strong>
-            <p>Thanks for contacting me, I will get back in touch with you soon.</p>
-         </div>
-      </section>
-   </container>
-
-   <script src="fcf-assets/js/fcf.just-validate.min.js"></script>
-   <script src="fcf-assets/js/fcf.form.js"></script>
+   <script src="./index.js" />
 </body>
 </html>
+
+
+
+<!-- <div class="content__my-work__anime">
+   <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_yc1xrhz7.json" background="transparent"  speed="1"  style="width: 200px; height: 200px;" autoplay></lottie-player>
+</div> -->
