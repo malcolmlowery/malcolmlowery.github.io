@@ -234,6 +234,23 @@ hmtl {
    margin-bottom: 70px;
    padding-bottom: 60px;
    padding-top: 60px;
+   overflow: hidden;
+}
+
+.app__summary__portrait-image {
+   object-fit: cover;
+   z-index: 999;
+   border-radius: 0;
+   overflow: hidden;
+   margin: 0 30px;
+   position: relative;
+   top: -24px;
+}
+
+.app__summary__portrait-image > video {
+   border-radius: 10px;
+   object-fit: cover;
+   width: 100%;
 }
 
 .content__my-work__summary {
