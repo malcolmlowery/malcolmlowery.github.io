@@ -11,7 +11,7 @@ const scrollToElementInDOM = (event) => {
    if(elementId === 'my-work') {
       return document.querySelector('.line').scrollIntoView({ behavior: 'smooth' })
    }
-   // if(elementId === 'tech-stack') {
-   //    return document.querySelector('.content__about-me').scrollIntoView({ behavior: 'smooth' })
-   // }
+   if(elementId === 'contact-me') {
+      return document.querySelector('.footer').scrollIntoView({ behavior: 'smooth' })
+   }
 }
