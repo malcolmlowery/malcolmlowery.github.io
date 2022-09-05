@@ -374,9 +374,13 @@ hmtl {
    display: flex;
    justify-content: center;
    margin-top: 54px;
-   max-width: 940px;
+   margin: 0 auto;
    padding: 80px;
    text-align: center;
+}
+
+.footer__content {
+   max-width: 940px;
 }
 
 .footer__content > h1 {
