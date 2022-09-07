@@ -10,8 +10,8 @@ hmtl {
 .body-bg {
    background-image: url("./assets/images/bg-01.jpeg");
    background-repeat: repeat;
-   filter: grayscale(100%) contrast(100%) opacity(8%);
-   height: 3500px;
+   filter: grayscale(100%) contrast(100%) opacity(7%);
+   height: 4600px;
    position: absolute;
    width: 100%;
    z-index: -1;
