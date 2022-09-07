@@ -88,8 +88,25 @@ hmtl {
    transition: 0.3s ease-out;
 }
 
-.button > a {
+a {
    color: #fff;
+   text-decoration: none;
+}
+
+.app__summary__links {
+   display: flex;
+   flex-direction: column;
+}
+
+.app__summary__links > a {
+   cursor: pointer;
+   color: rgb(255, 213, 106);
+   font-weight: 600;
+   font-size: 19px;
+   margin-right: 14px;
+   margin-bottom: 12px;
+   position: relative;
+   top: 10px;
    text-decoration: none;
 }
 
@@ -180,8 +197,9 @@ hmtl {
 
 /* About Me Section */
 .content__about-me {
-   padding-top: 80px;
    display: flex;
+   margin-bottom: 40px;
+   padding-top: 80px;
 }
 
 .content__about-me__summary {
@@ -209,6 +227,8 @@ hmtl {
 
 .content__about-me__anime > * {
    margin-left: 40px;
+   position: relative;
+   top: -20px;
 }
 
 /* My Work Section */
@@ -302,16 +322,6 @@ hmtl {
    margin-right: 100px;
 }
 
-.app__summary > a {
-   cursor: pointer;
-   color: rgb(255, 213, 106);
-   font-weight: 600;
-   font-size: 16px;
-   position: relative;
-   top: 10px;
-   text-decoration: none;
-}
-
 .techstack__content {
    margin-top: 20px;
 }
@@ -343,10 +353,8 @@ hmtl {
 
 .social-media {
    border-radius: 10px;
-   margin-bottom: 70px;
    margin: 0 auto;
-   position: relative;
-   top: -30px;
+   margin-bottom: 100px;
    text-align: center;
    width: 400px;
 }
