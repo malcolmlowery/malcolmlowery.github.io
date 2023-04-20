@@ -1,17 +1,18 @@
-const scrollToElementInDOM = (event) => {
-   event.preventDefault();
-   const elementId = event.target.id;
+const handleScrollToElement = (event) => {
+    const scrollToElements = document.querySelectorAll('.scroll-element')
 
-   if(elementId === 'home') {
-      return document.querySelector('.content').scrollIntoView({ behavior: 'smooth' })
-   }
-   if(elementId === 'about-me') {
-      return document.querySelector('.content__about-me').scrollIntoView({ behavior: 'smooth' })
-   }
-   if(elementId === 'my-work') {
-      return document.querySelector('.line').scrollIntoView({ behavior: 'smooth' })
-   }
-   if(elementId === 'contact-me') {
-      return document.querySelector('.footer').scrollIntoView({ behavior: 'smooth' })
-   }
-}
+    scrollToElements.forEach(element => {
+        const element_className = element.className.substring(0, element.className.indexOf(' '))
+        const element_boundingBox = element.getBoundingClientRect().top + window.pageYOffset - 80
+        
+        if(event.name === 'home' && element_className === 'home-content__hero-section') {
+            window.scrollTo({ top: 0 })
+        }
+        if(event.name === 'portfolio' && element_className === 'home-content__portfolio-title') {
+            window.scrollTo({ top: element_boundingBox })
+        }
+        if(event.name === 'contact' && element_className === 'home-content__email') {
+            window.scrollTo({ top: element_boundingBox })
+        }
+    }) 
+};

@@ -1,207 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./styles.css" />
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-   <title>Malcolm Lowery's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js"></script>
+    <title>Malcolm Lowery | Portfolio</title>
 </head>
 <body>
-   <div class="body-bg"></div>
-   <nav class="navigation">
-      <div class="navigation__content">
-         <h2 class="navigation__title">Malcolm Lowery</h2>
-         <div class="navigation__list-items">
-            <ul>
-               <li><button id="home" onclick="scrollToElementInDOM(event)">Home</button></li>
-               <li><button id="about-me" onclick="scrollToElementInDOM(event)">About Me</button></li>
-               <li><button id="my-work" onclick="scrollToElementInDOM(event)">My Work</button></li>
-               <!-- <li><button id="tech-stack" onclick="scrollToElementInDOM(event)">Tech Stack</button></li> -->
+    <div class="container">
+
+        <section class="navbar">
+            <ul class="navbar__items">
+                <li>
+                    <button name="home" onclick="handleScrollToElement(this)">
+                        <img src="./assets/home.svg" />
+                    </button>
+                </li>
+                <li>
+                    <button name="portfolio" onclick="handleScrollToElement(this)">
+                        <img src="./assets/work.svg" />
+                    </button>
+                </li>
+                <li>
+                    <button name="contact" onclick="handleScrollToElement(this)">
+                        <img src="./assets/contact-card.svg" />
+                    </button>
+                </li>
             </ul>
-            <button class="button" id="contact-me" onclick="scrollToElementInDOM(event)">Contact Me</button>
-         </div>
-      </div>
-   </nav>
-   <div class="content">
-      <section class="banner">
-         <img class="banner__profile-image" src="./assets/images/profile-image-01.jpg" />
-         <div class="banner__introduction">
-            <h1>Hello, my name is Malcolm Lowery</h1>
-            <p>Software Engineer</p>
-         </div>
-      </section>
-      <section class="content__about-me" id="content__about-me">
-         <div class="content__about-me__summary">
-            <h1>About Me</h1>
-               <p>I enjoy solving problems and experimenting when presented with an unknown. I am a motivated team player who also works well independently with minimal oversight. I operate with the mentality that every day is an opportunity to learn something new.</p>
-               <button class="button">
-                  <a href="./assets/files/Malcolm_Lowery_Resume.PDF" download="">Download Resume</a>
-               </button>
-         </div>
-         <div class="content__about-me__anime">
-            <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_i5tna2kq.json" background="transparent"  speed="1"  style="width: 300px; height: 300px;" autoplay></lottie-player>
-         </div>
-      </section>
+        </section>
 
-      <section class="content__my-work">
-         <div class="content__my-work__portfolio-item">
-            <div class="app__summary">
-               <h1>Nursely</h1>
-               <p>A social media app for nurses who want to share their thoughts, opinions, and questions - all while focusing on self-care and career accomplishments</p>
-               <div class="techstack__content">
-                  <h1>Tech Stack</h1>
-                  <div class="techstack-item">
-                     <img src="./assets/images/react-logo-01.png" />
-                     <p>React Native (Expo)</p>
-                  </div>
-                  <div class="techstack-item">
-                     <img src="./assets/images/redux-logo-01.png" />
-                     <p>Redux Toolkit Query</p>
-                  </div>
-                  <div class="techstack-item">
-                     <img src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" />
-                     <p>ExpressJS</p>
-                  </div>
-                  <div class="techstack-item">
-                     <img src="./assets/images/firebase-logo-01.png" />
-                     <p>Firebase Cloud Functions</p>
-                  </div>
-               </div>
-               <div class="app__summary__links">
-                  <a href="https://github.com/malcolmlowery/Nursely" target="_blank">Source Code</a>
-                  <a href="https://rainbow-peony-6fece0.netlify.app/" target="_blank">Product Page - WIP</a>
-               </div>
+        <section class="home-content">
+            <div class="home-content__hero-section scroll-element">
+                <img class="home-content__hero-section__profile-image" src="./assets/5EBF628C-D935-4F3F-B341-173E59E7E6CC.jpg" />
+                <div class="home-content__hero-section__user-info">
+                    <h2>Malcolm Lowery</h2>
+                    <h2>Software Engineer</h2>
+                    <h2>Fort Lauderdale, FL</h2>
+                </div>
             </div>
-            <video controls src="./assets/videos/nursely-vid-01.MP4" />
-         </div>
-      </section>
 
-      <section class="content__my-work">
-         <div class="content__my-work__portfolio-item">
-            <div class="app__summary">
-               <h1>WeatherDART</h1>
-               <p>This app is for viewing past and current weather conditions around the US!</p>
-               <div class="techstack__content">
-                  <h1>Tech Stack</h1>
-                  <div class="techstack-item">
-                     <img src="./assets/images/react-logo-01.png" />
-                     <p>React Native (Expo)</p>
-                  </div>
-                  <div class="techstack-item">
-                     <img src="./assets/images/redux-logo-01.png" />
-                     <p>Redux</p>
-                  </div>
-                  <div class="techstack-item">
-                     <img src="./assets/images/aerisweather-logo-01.jpg" />
-                     <p>Aeris Weather API</p>
-                  </div>
-               </div>
-               <div class="app__summary__links">
-                  <a href="https://github.com/malcolmlowery/WeatherDART" target="_blank">Source Code</a>
-                  <a href="https://weatherdart.netlify.app/" target="_blank">Demo</a>
-               </div>
+            <div class="home-content__cover-statement">
+                <p class="home-content__hero-section__mission-statement">
+                    As a software engineer, I am driven by a passion for problem-solving 
+                    and a commitment to achieving results. I approach every project with 
+                    a goal-oriented mindset, focusing on understanding the objectives and 
+                    delivering solutions that meet and exceed expectations.
+                </p>
             </div>
-            <img controls src="assets/images/weatherdart-image-01.png" />
-         </div>
-      </section>
 
-      <section class="content__my-work">
-         <div class="app__summary__portrait-image">
-            <video src="assets/videos/weatehrDART-webapp-01.mov" controls />
-         </div>
-         <div class="content__my-work__portfolio-item">
-            <div class="app__summary">
-               <h1>WeatherDART - Web App</h1>
-               <p>This app is for viewing past and current weather conditions around the US!</p>
-               <div class="techstack__content">
-                  <h1>Tech Stack</h1>
-                  <div class="techstack-item">
-                     <img src="./assets/images/react-logo-01.png" />
-                     <p>ReactJS</p>
-                  </div>
-                  <div class="techstack-item">
-                     <img src="./assets/images/redux-logo-01.png" />
-                     <p>Redux</p>
-                  </div>
-                  <div class="techstack-item">
-                     <img src="./assets/images/mui-logo-01.png" />
-                     <p>Material UI</p>
-                  </div>
-                  <div class="techstack-item">
-                     <img src="./assets/images/aerisweather-logo-01.jpg" />
-                     <p>Aeris Weather API</p>
-                  </div>
-               </div>
-               <div class="app__summary__links">
-                  <a href="https://github.com/malcolmlowery/WeatherDART-Website" target="_blank">Source Code</a>
-                  <a href="https://63162750ffd94409ed961715--funny-dasik-a62860.netlify.app/" target="_blank">Demo</a>
-               </div>
+            <div class="home-content__tech scroll-element">
+                <h2 class="home-content__tech__title">Tech Stack</h2>
+                <p><img src="./assets/react.svg" />React | React Native</p>
+                <p><img src="./assets/brand-redux.svg" />Redux | RTK Query</p>
+                <p><img src="./assets/firebase.svg" />Firebase</p>
+                <p><img src="./assets/node-fill.svg" />ExpressJS</p>
             </div>
-         </div>
-      </section>
 
-      <section class="content__my-work">
-         <div class="content__my-work__portfolio-item">
-            <div class="app__summary">
-               <h1>PawCast</h1>
-               <p>Dog breeding app with social media features to connect with others.</p>
-               <div class="techstack__content">
-                  <h1>Tech Stack</h1>
-                  <div class="techstack-item">
-                     <img src="./assets/images/react-logo-01.png" />
-                     <p>React Native (Expo)</p>
-                  </div>
-                  <div class="techstack-item">
-                     <img src="./assets/images/redux-logo-01.png" />
-                     <p>Redux</p>
-                  </div>
-               </div>
-               <div class="app__summary__links">
-                  <a href="https://github.com/malcolmlowery/PawCast" target="_blank">Source Code</a>
-                  <a href="https://apps.apple.com/us/app/pawcast/id1542528251" target="_blank">App Store</a>
-               </div>
-            </div>
-            <video controls src="./assets/videos/pawcast-vid-01.MP4" />
-         </div>
-      </section>
-      
-      <div class="line"></div>
+            <h2 class="home-content__portfolio-title scroll-element">My Portfolio</h2>
 
-      <section class="social-media">
-         <h1>Follow Me!</h1>
-         <div class="social-media__items">
-            <div class="social-media__items__item">
-               <a href="https://www.linkedin.com/in/malcolmlowery/" target="_blank">
-                  <img class="social-media__items__item__icon" src="./assets/images/linkedin-logo-01.png" />
-               </a>
+            <div class="home-content__porfolio">
+                <div class="home-content__porfolio__item a">
+                    <video controls src="./assets/portfolio_images/nursely-vid-01.MP4" />
+                </div>
+                <div class="home-content__porfolio__item b">
+                    <img src="./assets/portfolio_images/632bb43bf4b1951698039801--quoala.netlify.app_(iPhone XR).png" />
+                </div>
+                <div class="home-content__porfolio__item c">
+                    <img src="./assets/portfolio_images/161180324-04983b3d-c88d-43a5-b3c4-468b4e2af114.png" />
+                </div>
+                <div class="home-content__porfolio__item d">
+                    <img src="./assets/portfolio_images/Screenshot 2023-04-18 at 5.32.44 PM.png" />
+                </div>
             </div>
-            <div class="social-media__items__item">
-               <a href="https://twitter.com/LeadAppDev" target="_blank">
-                  <img class="social-media__items__item__icon" src="./assets/images/twitter-logo-01.png" />
-               </a>
-            </div>
-            <div class="social-media__items__item">
-               <a href="https://github.com/malcolmlowery" target="_blank">
-                  <img class="social-media__items__item__icon" src="./assets/images/github-logo-01.png" />
-               </a>
-            </div>
-         </div>
-      </section>
-   </div>
-   
-   <div class="footer">
-      <div class="footer__content">
-         <h1>Contact Me</h1>
-         <p>Email: malcolmlowery.developer@gmail.com</p>
-         <p>© 2022 Malcolm Lowery | Portfolio</p>
-      </div>
-   </div>
 
-   <script src="./index.js"></script>
+            <div class="home-content__email scroll-element">
+                <h2 class="home-content__email__title">Let's Connect!</h2>
+                <form action="https://formsubmit.co/malcolmlowery.developer@gmail.com" method="post">
+                    <input type="text" name="name" placeholder="Name" required />
+                    <input type="email" name="email" placeholder="Email" required />
+                    <textarea placeholder="Your Message" rows="10" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+
+    </div>
 </body>
 </html>
