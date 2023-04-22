@@ -5,86 +5,209 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css" />
-    <script src="./index.js"></script>
     <title>Malcolm Lowery | Portfolio</title>
 </head>
 <body>
-    <div class="container">
+    <nav>
+        <h3>Welcome!</h3>
+        <ul>
+            <li>
+                <button>Home</button>
+            </li>
+            <li>
+                <button>Tech Stack</button>
+            </li>
+            <li>
+                <button>Portfolio</button>
+            </li>
+            <li>
+                <button>Connect</button>
+            </li>
+        </ul>
+    </nav>
+    <div class="home__container">
 
-        <section class="navbar">
-            <ul class="navbar__items">
-                <li>
-                    <button name="home" onclick="handleScrollToElement(this)">
-                        <img src="./assets/home.svg" />
-                    </button>
-                </li>
-                <li>
-                    <button name="portfolio" onclick="handleScrollToElement(this)">
-                        <img src="./assets/work.svg" />
-                    </button>
-                </li>
-                <li>
-                    <button name="contact" onclick="handleScrollToElement(this)">
-                        <img src="./assets/contact-card.svg" />
-                    </button>
-                </li>
-            </ul>
-        </section>
+        <div class="card">
+            <div class="card__user-summary">
+                <div class="card__user-summary__header">
+                    <img alt="malcolm lowery" src="./assets/profile-images/5EBF628C-D935-4F3F-B341-173E59E7E6CC.jpg"/>
+                    <div class="card__user-summary__header__user-info">
+                        <h1>Malcolm Lowery</h1>
+                        <h3>Software Engineer</h3>
+                    </div>
+                </div>
+                <div class="card__user-summary__mission-statement">
+                    <p>
+                        As a software engineer, I am driven by a passion for problem-solving and a 
+                        commitment to achieving results. I approach every project with a goal-oriented mindset, 
+                        focusing on understanding the objectives and delivering solutions that meet and 
+                        exceed expectations.
+                    </p>
+                </div>
+            </div>
+            <div class="card__socials">
+                <div class="card__socials__icon">
+                    <img alt="github" src="./assets/icons/twitter.svg" />
+                </div>
+                <div class="card__socials__icon">
+                    <img alt="github" src="./assets/icons/github.svg" />
+                </div>
+                <div class="card__socials__icon">
+                    <img alt="github" src="./assets/icons/linkedin (1).svg" />
+                </div>
+                <div class="card__socials__icon">
+                    <img alt="github" src="./assets/icons/email-document.svg" />
+                </div>
+            </div>
+        </div>
 
-        <section class="home-content">
-            <div class="home-content__hero-section scroll-element">
-                <img class="home-content__hero-section__profile-image" src="./assets/5EBF628C-D935-4F3F-B341-173E59E7E6CC.jpg" />
-                <div class="home-content__hero-section__user-info">
-                    <h2>Malcolm Lowery</h2>
-                    <h2>Software Engineer</h2>
-                    <h2>Fort Lauderdale, FL</h2>
+        <div class="home__section-title">
+            <img alt="right arrow" src="./assets/icons/right-arrow-01.png" />
+            <h3>Technology Stack</h3>
+        </div>
+        
+        <div class="home__container__technology-stack">
+            <div class="home__container__technology-stack__items">
+                <div class="home__container__technology-stack__items__item">
+                    <img alt="react native" src="./assets/icons/react (2).svg" />
+                    <p>React Native</p>
+                </div>
+                <div class="home__container__technology-stack__items__item">
+                    <img alt="react native" src="./assets/icons/react (1).svg" />
+                    <p>ReactJS</p>
+                </div>
+                <div class="home__container__technology-stack__items__item">
+                    <img alt="react native" src="./assets/icons/brand-redux.svg" />
+                    <p>RTK Query</p>
+                </div>
+                <div class="home__container__technology-stack__items__item">
+                    <img alt="react native" src="./assets/icons/node-fill.svg" />
+                    <p>Node</p>
+                </div>
+                <div class="home__container__technology-stack__items__item">
+                    <img alt="react native" src="./assets/icons/firebase.svg" />
+                    <p>Firebase</p>
+                </div>
+                <div class="home__container__technology-stack__items__item">
+                    <img alt="react native" src="./assets/icons/html5 (2).svg" />
+                    <p>HTML</p>
+                </div>
+                <div class="home__container__technology-stack__items__item">
+                    <img alt="react native" src="./assets/icons/css3-html-logo-social-social-media.svg" />
+                    <p>Css</p>
+                </div>
+                <div class="home__container__technology-stack__items__item">
+                    <img alt="react native" src="./assets/icons/figma.svg" />
+                    <p>Figma</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="home__section-title">
+            <img alt="right arrow" src="./assets/icons/right-arrow-01.png" />
+            <h3>Portfolio</h3>
+        </div>
+
+        <div class="home__container__porfolio">
+            <div class="card">
+                <div class="card__content">
+                    <div class="card__content__right-side">
+                        <h1>Moely</h1>
+                        <p>
+                            A social media app for nurses who want to share their thoughts, opinions, and questions - 
+                            all while focusing on self-care and career accomplishments.
+                        </p>
+                        <button>
+                            <a target="_blank" href="https://github.com/malcolmlowery/Nursely">Source Code</a>
+                        </button>
+                        <div class="card__content__right-side__tech_stack">
+                            <img src="./assets/icons/react (2).svg" />
+                            <img src="./assets/icons/node-fill.svg" />
+                            <img src="./assets/icons/firebase.svg" />
+                            <img src="./assets/icons/brand-redux.svg" />
+                        </div>
+                    </div>
+                    <div class="card__content__left-side">
+                        <img src="./assets/screenshots/moely-01.png" />
+                    </div>
                 </div>
             </div>
 
-            <div class="home-content__cover-statement">
-                <p class="home-content__hero-section__mission-statement">
-                    As a software engineer, I am driven by a passion for problem-solving 
-                    and a commitment to achieving results. I approach every project with 
-                    a goal-oriented mindset, focusing on understanding the objectives and 
-                    delivering solutions that meet and exceed expectations.
-                </p>
-            </div>
-
-            <div class="home-content__tech scroll-element">
-                <h2 class="home-content__tech__title">Tech Stack</h2>
-                <p><img src="./assets/react.svg" />React | React Native</p>
-                <p><img src="./assets/brand-redux.svg" />Redux | RTK Query</p>
-                <p><img src="./assets/firebase.svg" />Firebase</p>
-                <p><img src="./assets/node-fill.svg" />ExpressJS</p>
-            </div>
-
-            <h2 class="home-content__portfolio-title scroll-element">My Portfolio</h2>
-
-            <div class="home-content__porfolio">
-                <div class="home-content__porfolio__item a">
-                    <video controls src="./assets/portfolio_images/nursely-vid-01.MP4" />
-                </div>
-                <div class="home-content__porfolio__item b">
-                    <img src="./assets/portfolio_images/632bb43bf4b1951698039801--quoala.netlify.app_(iPhone XR).png" />
-                </div>
-                <div class="home-content__porfolio__item c">
-                    <img src="./assets/portfolio_images/161180324-04983b3d-c88d-43a5-b3c4-468b4e2af114.png" />
-                </div>
-                <div class="home-content__porfolio__item d">
-                    <img src="./assets/portfolio_images/Screenshot 2023-04-18 at 5.32.44 PM.png" />
+            <div class="card">
+                <div class="card__content">
+                    <div class="card__content__right-side">
+                        <h1>WeatherDART</h1>
+                        <p>Please make sure you have expo installed globally!</p>
+                        <button>
+                            <a target="_blank" href="https://github.com/malcolmlowery/WeatherDART">Source Code</a>
+                        </button>
+                        <div class="card__content__right-side__tech_stack">
+                            <img src="./assets/icons/react (2).svg" />
+                            <img src="./assets/icons/brand-redux.svg" />
+                        </div>
+                    </div>
+                    <div class="card__content__left-side">
+                        <img src="./assets/screenshots/weatherdart-01.png" />
+                    </div>
                 </div>
             </div>
 
-            <div class="home-content__email scroll-element">
-                <h2 class="home-content__email__title">Let's Connect!</h2>
+
+            <div class="card">
+                <div class="card__content">
+                    <div class="card__content__right-side">
+                        <h1>PawCast</h1>
+                        <p>Dog breeding app with social media features to connect with others.</p>
+                        <button>
+                            <a target="_blank" href="https://github.com/malcolmlowery/PawCast">Source Code</a>
+                        </button>
+                        <div class="card__content__right-side__tech_stack">
+                            <img src="./assets/icons/react (2).svg" />
+                            <img src="./assets/icons/firebase.svg" />
+                            <img src="./assets/icons/brand-redux.svg" />
+                        </div>
+                    </div>
+                    <div class="card__content__left-side">
+                        <img src="./assets/screenshots/pawcast-01.png" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__content">
+                    <div class="card__content__right-side">
+                        <h1>Quoala</h1>
+                        <p>An eCommerce website that shows a list of skincare products.</p>
+                        <button>
+                            <a target="_blank" href="https://github.com/malcolmlowery/Quoala">Source Code</a>
+                        </button>
+                        <div class="card__content__right-side__tech_stack">
+                            <img src="./assets/icons/html5 (2).svg" />
+                            <img src="./assets/icons/css3-html-logo-social-social-media.svg" />
+                            <img src="./assets/icons/react (1).svg" />
+                        </div>
+                    </div>
+                    <div class="card__content__left-side">
+                        <img src="./assets/screenshots//quoala-01.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-content__email">
+            <div class="home-content__email__left-side">
+                <h3 class="home-content__email__title">Let's Connect!</h3>
                 <form action="https://formsubmit.co/malcolmlowery.developer@gmail.com" method="post">
                     <input type="text" name="name" placeholder="Name" required />
                     <input type="email" name="email" placeholder="Email" required />
-                    <textarea placeholder="Your Message" rows="10" required></textarea>
-                    <button type="submit">Send</button>
+                    <textarea placeholder="Your Message" rows="6" required></textarea>
+                    <button type="submit">Send Message</button>
                 </form>
             </div>
-        </section>
+            <div class="home-content__email__right-side">
+                <img src="./assets/images/leadappdev_artistic_image_of_the_Alaska_Satellite_with_a_purple_4fcbf589-80a2-41ae-a8ca-069d8fc99a65.png" />
+            </div>
+        </div>
 
     </div>
 </body>
