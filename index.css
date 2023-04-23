@@ -107,11 +107,27 @@ section:last-child {
     width: 60px;
 }
 
-.card__user-summary__header__user-info > h1 {
+.card__user-summary__header__user-info__top > h1 {
     background: -webkit-linear-gradient(341deg, #9557ff, #7038d2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.card__user-summary__header__user-info__top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.card__user-summary__header__user-info {
+    flex: 1;
+}
+
+.card__user-summary__header__user-info__top > a {
+    text-decoration: none;
+}
+
 .card__user-summary__header__user-info > h3 {
     font-weight: 500;
 }
@@ -392,6 +408,15 @@ section:last-child {
     .card {
         flex-direction: column;
         padding-bottom: 9px;
+    }
+
+    .card__user-summary__header__user-info__top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .card__user-summary__header__user-info__top > a {
+        margin: 4px 0;
     }
 
     .card__user-summary__mission-statement {
