@@ -107,9 +107,6 @@ section:last-child {
     width: 60px;
 }
 
-.card__user-summary__header__user-info {
-
-}
 .card__user-summary__header__user-info > h1 {
     background: -webkit-linear-gradient(341deg, #9557ff, #7038d2);
     -webkit-background-clip: text;
@@ -411,6 +408,16 @@ section:last-child {
     .card__socials__icon {
         padding: 10px;
         margin-bottom: 10px;
+    }
+
+    .card__socials__icon > a > img, .card__socials__icon > button > img {
+        height: 24px;
+        width: 28px;
+    }
+
+    .card__socials__icon:nth-child(3) > a > img {
+        left: 3px;
+        position: relative;
     }
 
     .home__container__technology-stack {
