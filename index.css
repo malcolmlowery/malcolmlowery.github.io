@@ -22,39 +22,63 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100%;
+    overflow-y: hidden;
 }
 
 nav {
-    align-items: center;
     background-color: #fff;
     box-shadow: 2px 0 40px rgba(0, 0, 0, 0.15);
     display: flex;
-    justify-content: space-between;
     height: 60px;
+    justify-content: center;
     left: 0;
-    padding: 0 20px;
     position: fixed;
     right: 0;
+    top: 0;
     z-index: 1000;
 }
 
-nav > ul {
+.nav_content {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    width: 950px;
+}
+
+.nav_content > ul {
     display: flex;
     flex-direction: row;
 }
 
-nav > ul > li {
+.nav_content > ul > li {
     list-style-type: none;
     margin-left: 20px;
 }
 
+.home__container::-webkit-scrollbar{
+    display: none;
+}
+
 .home__container {
-    margin-top: 40px;
+    height: 100vh;
+    margin-inline: auto;
     width: 950px;
-    left: 50%;
-    position: absolute;
-    top: 60px;
-    transform: translateX(-50%);
+    overflow-y: scroll;
+    position: relative;
+    scroll-snap-type: y proximity;
+    scroll-padding-top: 15vh;
+    scroll-padding-bottom: 15vh;
+    padding-top: 100px;
+}
+
+section {
+    scroll-snap-align: start;
+    transition: 500ms;
+}
+
+section:last-child {
+    scroll-snap-align: end;
 }
 
 .card {
@@ -179,7 +203,6 @@ nav > ul > li {
     margin-bottom: 6px;
 }
 
-/*  */
 .home__container__porfolio {
     display: flex;
     flex-wrap: wrap;
@@ -242,14 +265,10 @@ nav > ul > li {
 }
 
 .home-content__email {
-    /* background-color: #fff; */
     background-color: #0000004b;
     border-radius: 60px;
-    box-shadow: 2px 0 40px rgba(0, 0, 0, 0.15);
     display: flex;
     margin: 70px 0;
-    /* margin-inline: auto; */
-    /* width: 100vw; */
 }
 
 .home-content__email__right-side {
@@ -328,4 +347,136 @@ nav > ul > li {
     font-weight: 600;
     margin-top: 18px;
     padding: 14px;
+}
+
+.fadeOut-active{
+    opacity: 0;
+}
+
+@media (max-width: 600px) {
+    nav {
+        width: 100vw;
+        align-items: center;
+        display: flex;
+    } 
+
+    .nav_content {
+        padding: 0;
+        width: 100vw;
+        display: block;
+    }
+
+    .nav_content > h3 {
+        display: none;
+    }
+
+    .nav_content > ul {
+        justify-content: center;
+    }
+
+    .nav_content > ul > li {
+        margin: 0 10px;
+    }
+
+    .home__container {
+        width: 100vw;
+        padding: 0 10px;
+        padding-top: 90px;
+    }
+
+    .card {
+        flex-direction: column;
+        padding-bottom: 9px;
+    }
+
+    .card__user-summary__mission-statement {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+    }
+
+    .card__socials {
+        display: flex;
+        margin-top: 16px;
+    }
+
+    .card__socials__icon {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .home__container__technology-stack {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .home__container__technology-stack__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 40px 0;
+    }
+
+    .card__content {
+        width: 100%;
+    }
+
+    .home__container__technology-stack__items__item {
+        margin: 0;
+        width: 110px;
+    }
+
+    .home__container__porfolio > .card {
+        width: 100vw;
+    }
+
+    .home__container__porfolio {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .card__content__left-side {
+        display: none;
+    }
+
+    .home__section-title {
+        margin-left: 0;
+    }
+
+    .fadeOut-active {
+        opacity: 1;
+    }
+
+    .home-content__email {
+        padding-bottom: 26px;
+        border-radius: 20px;
+    }
+
+    .home-content__email__title {
+        padding: 0;
+        padding-top: 30px;
+    }
+
+    .home-content__email__left-side > form {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .home-content__email__left-side > form > input, .home-content__email__left-side > form > textarea {
+        border-radius: 12px;
+        padding: 10px;
+    }
+
+    .home-content__email__left-side > form > button {
+        font-weight: 500;
+    }
+    
+    .home-content__email__left-side {
+        width: 100vw;
+    }
+
+    .home-content__email__right-side {
+        display: none;
+    }
 }
