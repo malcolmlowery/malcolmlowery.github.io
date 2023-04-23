@@ -142,9 +142,13 @@ section:last-child {
     justify-content: center;
 }
 
-.card__socials__icon > img {
+.card__socials__icon > a > img, .card__socials__icon > button > img {
     height: 24px;
     width: 24px;
+}
+
+.card__socials__icon:hover {
+    cursor: pointer;
 }
 
 .home__section-title {
@@ -362,8 +366,8 @@ section:last-child {
 
     .nav_content {
         padding: 0;
-        width: 100vw;
         display: block;
+        width: 100vw;
     }
 
     .nav_content > h3 {
@@ -378,10 +382,14 @@ section:last-child {
         margin: 0 10px;
     }
 
+    .nav_content > ul > li > button {
+        font-size: 16px;
+    }
+
     .home__container {
-        width: 100vw;
         padding: 0 10px;
         padding-top: 90px;
+        width: 100vw;
     }
 
     .card {
@@ -415,7 +423,7 @@ section:last-child {
         flex-wrap: wrap;
         gap: 20px;
         justify-content: center;
-        padding: 40px 0;
+        padding: 40px 20px;
     }
 
     .card__content {
