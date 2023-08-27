@@ -16,7 +16,7 @@ home_container_element.addEventListener('scroll', (event) => {
     elementsToHide.forEach((element, index) => {
         const reveal_top = elementsToHide[index].getBoundingClientRect().top
         const reveal_point = 0
-
+        
         if(reveal_top < reveal_point) {
             elementsToHide[index].classList.add('fadeOut-active')
         } else {
