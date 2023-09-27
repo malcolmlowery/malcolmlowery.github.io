@@ -226,17 +226,19 @@ section:last-child {
     gap: 10px;
     margin: 0 20px;
     margin-top: 20px;
+    justify-content: center;
 }
 
 .card__content {
     background-color: #fff;
     border-radius: 30px;
     display: flex;
+    height: 100%;
     padding: 28px;
 }
 
 .card__content__right-side {
-    max-width: 258px;
+    max-width: 200px;
 }
 
 .card__content__right-side > h1 {
